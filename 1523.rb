@@ -2,5 +2,5 @@
 # @param {Integer} high
 # @return {Integer}
 def count_odds(low, high)
-    Array(low..high).filter{|n|n%2==1}.count
+    return ( high - low ) / 2 + ([(low % 2 == 1), (high % 2 == 1)].any? ? 1 : 0)
 end
